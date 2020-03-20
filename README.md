@@ -1,6 +1,6 @@
 ### What it is
 
-It is a cli tool to figure out the usage of Any specific `import` in your source files
+It is a cli tool to figure out the usage of any specific `import` in your source files
 
 - Supports glob patter supported by [glob](https://www.npmjs.com/package/glob)
 - Supports 3 output report formats - `table(default), csv, json`
@@ -25,3 +25,7 @@ Options:
 ```shell
 > node cli.js --filepath="test/src/**/*.js" --components="LegacyButton,LegacyInput" --reportformat="csv"
 ```
+
+### Output
+
+![image](./images/output.png)
