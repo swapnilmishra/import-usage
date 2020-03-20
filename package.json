@@ -1,0 +1,13 @@
+{
+  "name": "component-usage",
+  "version": "1.0.0",
+  "license": "MIT",
+  "bin": "cli.js",
+  "dependencies": {
+    "@babel/parser": "^7.8.8",
+    "@babel/traverse": "^7.8.6",
+    "cli-table3": "^0.3.1",
+    "glob": "^7.1.6",
+    "yargs": "^15.3.1"
+  }
+}
