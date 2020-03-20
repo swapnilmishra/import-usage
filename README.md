@@ -2,7 +2,7 @@
 
 It is a cli tool to figure out the usage of any specific `import` in your source files
 
-- Supports glob patter supported by [glob](https://www.npmjs.com/package/glob)
+- Supports [glob](https://www.npmjs.com/package/glob) patterns for searching in files.
 - Supports 3 output report formats - `table(default), csv, json`
 
 ### Help
