@@ -1,2 +1,2 @@
-import { LegacyButton, LegacyInput } from "@scoped/ui";
+import { Button as NewButton, Input } from "@scoped/ui";
 import Button from "./Button";

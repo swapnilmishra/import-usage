@@ -32,11 +32,20 @@ function readAST(code) {
 
     traverse(ast, {
       enter(path) {
-        if (path.isImportSpecifier()) {
+        if (path.isImportSpecifier() || path.isImportDefaultSpecifier()) {
           if (scopeToPackage && path.parent.source.value !== scopeToPackage) {
             return;
           }
-          const compName = path.node.imported.name;
+          const node = path.node;
+          let compName;
+          if (path.isImportSpecifier()) {
+            compName = node.imported.name;
+          }
+
+          if (path.isImportDefaultSpecifier()) {
+            compName = node.local.name;
+          }
+
           if (componentsToFind.includes(compName)) {
             componentsCount[compName]++;
           }
