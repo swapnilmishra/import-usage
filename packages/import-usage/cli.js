@@ -8,10 +8,12 @@ const buildCommands = require("./commands");
 
 let componentsToFind = [];
 let componentsCount = {};
+let scopeToPackage = null;
 
-function handler({ filepath, components, ignore, reportformat }) {
+function handler({ filepath, components, ignore, reportformat, scope }) {
   componentsToFind = components.split(",");
   componentsToFind.forEach(c => (componentsCount[c] = 0));
+  scopeToPackage = scope;
 
   glob(filepath, { ignore }, function(er, files) {
     files.forEach(file => {
@@ -31,6 +33,9 @@ function readAST(code) {
     traverse(ast, {
       enter(path) {
         if (path.isImportSpecifier()) {
+          if (scopeToPackage && path.parent.source.value !== scopeToPackage) {
+            return;
+          }
           const compName = path.node.imported.name;
           if (componentsToFind.includes(compName)) {
             componentsCount[compName]++;

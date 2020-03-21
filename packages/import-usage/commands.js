@@ -12,11 +12,18 @@ function buildCommands(handler) {
     })
     .option("ignore", {
       default: "**/node_modules/**",
+      type: "string",
       describe: "Directories to ignore i.e node_modules"
     })
     .option("reportformat", {
       default: "table",
-      choices: ["table", "csv", "json"]
+      type: "string",
+      choices: ["table", "csv", "json"],
+      describe: "stdout format of data"
+    })
+    .option("scope", {
+      type: "string",
+      describe: "If defined, components only from this package will be searched"
     })
     .demandOption(
       ["filepath", "components"],
