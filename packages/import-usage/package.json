@@ -1,0 +1,22 @@
+{
+  "name": "import-usage",
+  "version": "0.1.1",
+  "license": "MIT",
+  "bin": "cli.js",
+  "repository": {
+    "url": "https://github.com/swapnilmishra/import-usage",
+    "type": "git"
+  },
+  "author": {
+    "name": "Swapnil Mishra",
+    "email": "swapmis1084@gmail.com",
+    "url": "https://swapnilmishra.github.io/"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.9.0",
+    "@babel/traverse": "^7.9.0",
+    "cli-table3": "^0.5.1",
+    "glob": "^7.1.6",
+    "yargs": "^15.3.1"
+  }
+}
