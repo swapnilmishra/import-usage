@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "import-usage": "1.0.0",
+    "import-usage": "latest",
     "tape": "^4.13.2"
   },
   "scripts": {
