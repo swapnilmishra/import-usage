@@ -1,3 +1,5 @@
+![CI](https://github.com/swapnilmishra/import-usage/workflows/CI/badge.svg?branch=master)
+
 ### What it is
 
 It is a cli tool to figure out the usage of any specific `import` in your source files
@@ -33,4 +35,3 @@ Options:
 ### TODO
 
 - Publish to registry
-- Run tests as github action
