@@ -69,7 +69,7 @@ npm -g install import-usage
 then from terminal
 
 ```shell
-"import-usage --filepath='src/**/*.js' --components='Button,Input' --ignore='**/node_modules/**' --reportformat='csv' --scope='@scoped-package/ui'
+import-usage --filepath='src/**/*.js' --components='Button,Input' --ignore='**/node_modules/**' --reportformat='csv' --scope='@scoped-package/ui'
 ```
 
 ### Output
