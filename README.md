@@ -5,14 +5,25 @@
 It is a cli tool to figure out the usage of any specific `import` in your source files
 
 - Supports [glob](https://www.npmjs.com/package/glob) patterns for searching in files.
-- Supports scoping the component search. See `--scope` argument
+- Supports scoping the import search. See `--scope` argument
 - Supports ignoring directories while searching
 - Supports 3 output report formats - `table(default), csv, json`
+
+### Installing
+
+```shell
+yarn add import-usage
+```
+or
+
+```shell
+npm install import-usage
+```
 
 ### How to use
 
 ```shell
-> import-usage -h
+import-usage -h
 
 Options:
   --filepath      File or directory path or glob pattern     [string] [required]
@@ -25,10 +36,40 @@ Options:
                                                                         [string]
 ```
 
-### Running
+### Using in package.json
 
 ```shell
-> import-usage --filepath="src/**/*.js" --components="Button,Input" --ignore="**/node_modules/**" --reportformat="csv" --scope="@scoped-package/ui"
+yarn add import-usage
+```
+or
+
+```shell
+npm install import-usage
+```
+
+In your `package.json`
+
+```json
+{ 
+  "scripts" : {
+    "show-component-usage" : "import-usage --filepath='src/**/*.js' --components='Button,Input' --ignore='**/node_modules/**' --reportformat='csv' --scope='@scoped-package/ui'
+  }
+}
+```
+
+### From CLI
+
+```shell
+yarn global add import-usage
+```
+or
+```shell
+npm -g install import-usage
+```
+then from terminal
+
+```shell
+"import-usage --filepath='src/**/*.js' --components='Button,Input' --ignore='**/node_modules/**' --reportformat='csv' --scope='@scoped-package/ui'
 ```
 
 ### Output
